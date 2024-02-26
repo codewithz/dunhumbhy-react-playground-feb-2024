@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import { HelloComponent } from './components/HelloComponent';
+import { NameComponent } from './components/NameComponent';
+import { NameFunctionalComponent } from './components/NameFunctionalComponent';
+import { IncrementDecrementComponent } from './components/IncrementDecrementComponent';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>Welcome to React Training at Dunhumbhy</h1>
+     <hr />
+     <HelloComponent />
+     <hr/>
+     <NameComponent name="Thomas" 
+     message="We are learning React"/>
+     <hr/>
+     <NameComponent name="Elizabeth" 
+     message="JS is fun"/>
+     <hr/>
+     <NameFunctionalComponent name="Leo" 
+     message="React is Awesome"/>
+
+     <hr/>
+     <IncrementDecrementComponent />
+
+
     </div>
   );
 }
