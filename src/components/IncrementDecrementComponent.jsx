@@ -6,6 +6,14 @@ export class IncrementDecrementComponent extends Component {
     name: "Zartab",
   };
 
+  changeName= () =>{
+    if(!this.state.name.includes("Nakhwa")){
+    this.setState({
+      name:this.state.name.concat(" Nakhwa")
+    })
+  }
+  }
+
   incrementCount = () => {
     this.setState({
       counter: this.state.counter + 1,
@@ -25,14 +33,14 @@ export class IncrementDecrementComponent extends Component {
   render() {
     return (
       <div>
-        <h3>Name: </h3>
+        <h3>Name: {this.state.name}</h3>
         <br />
         Counter: {this.state.counter}
         <br />
         <button onClick={this.incrementCount}>Increment</button>{" "}
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button onClick={this.decrementCount}>Decrement</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button>Change Name</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onClick={this.changeName}>Change Name</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     );
   }
