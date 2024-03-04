@@ -6,9 +6,16 @@ import { NameFunctionalComponent } from './components/NameFunctionalComponent';
 import { IncrementDecrementComponent } from './components/IncrementDecrementComponent';
 import { NameChangeFunctionalComponent } from './components/NameChangeFunctionalComponent';
 import TickerComponent from './components/TickerComponent';
+
+import CountComponent from './components/CountComponent';
 function App() {
   return (
     <div className="App">
+
+      <CountComponent />
+
+    {/* <IncDecComponent />
+    <hr/>
      <h1>Welcome to React Training at Dunhumbhy</h1>
      <hr />
      <HelloComponent />
@@ -27,7 +34,7 @@ function App() {
      <hr/>
      <IncrementDecrementComponent />
      <hr/>
-     <NameChangeFunctionalComponent />
+     <NameChangeFunctionalComponent /> */}
 
 
     </div>
