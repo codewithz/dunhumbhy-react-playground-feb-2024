@@ -8,11 +8,14 @@ import { NameChangeFunctionalComponent } from './components/NameChangeFunctional
 import TickerComponent from './components/TickerComponent';
 
 import CountComponent from './components/CountComponent';
+import ExpensiveComponent from './components/ExpensiveComponent';
 function App() {
   return (
     <div className="App">
 
       <CountComponent />
+      <br/>
+      <ExpensiveComponent />
 
     {/* <IncDecComponent />
     <hr/>
