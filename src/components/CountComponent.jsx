@@ -28,19 +28,39 @@
 // state transitions, or state objects with multiple fields.
 
 
-import React from 'react'
+import React,{useReducer} from 'react'
+
+const initialState={
+    count:0
+}
+
+const reducer=(state,action)=>{
+
+    switch(action.type){
+        case 'increment':
+            return {...state,count:state.count+1};
+        case 'decrement':
+            return {...state,count:state.count-1};
+        case 'reset':
+            return initialState
+        default:
+            return state
+    }
+}
 
 export default function CountComponent() {
+
+    const [state,dispatch]=useReducer(reducer,initialState);
   return (
     <div>
    
     <br />
-    Counter: {0}
+    Counter: {state.count}
     <br />
-    <button onClick={()=>{}}>Increment</button>{" "}
+    <button onClick={()=>dispatch({'type':'increment'})}>Increment</button>{" "}
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button onClick={()=>{}}>Decrement</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button onClick={()=>{}}>Reset</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onClick={()=>dispatch({'type':'decrement'})}>Decrement</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onClick={()=>dispatch({'type':'reset'})}>Reset</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
   )
 }
